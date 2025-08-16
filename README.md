@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🔗 Minx-URL  
 
-## Getting Started
+A minimal and modern **URL Shortener** built with **Next.js 13, MongoDB, and TailwindCSS**.  
+ 
 
-First, run the development server:
+---
 
+## 🚀 Features  
+- Shorten long URLs instantly  
+- Create custom aliases (e.g., `minx-url.com/my-link`)  
+- Copy & share short links easily  
+- Redirect short URLs to the original link  
+- Responsive and modern UI  
+- MongoDB database for persistence  
+
+---
+
+## 🛠️ Tech Stack  
+- [Next.js 13 (App Router)](https://nextjs.org/) – Full-stack React framework  
+- [MongoDB](https://www.mongodb.com/) – NoSQL Database  
+- [TailwindCSS](https://tailwindcss.com/) – Styling  
+- [React Hot Toast](https://react-hot-toast.com/) – Notifications  
+
+---
+
+## 📂 Project Structure  
+minx-url/
+│── app/
+│ ├── page.js # Homepage with URL form
+│ ├── [url]/page.js # Dynamic route for short URL redirect
+│── app/api/generate/route.js # API endpoint for generating short links
+│── public/ # Public assets (favicon, logo, etc.)
+│── lib/mongodb.js # MongoDB connection utility
+
+---
+
+## ⚡ Getting Started  
+
+### 1️⃣ Clone the Repository  
 ```bash
+git clone https://github.com/yourusername/minx-url.git
+cd minx-url
+2️⃣ Install Dependencies
+bash
+Copy
+Edit
+npm install
+3️⃣ Setup Environment Variables
+Create a .env.local file in the root:
+
+MONGODB_URI=your-mongodb-connection-string
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+4️⃣ Run the Development Server
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Visit 👉 http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📸 Demo Flow
+Enter a long URL
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+(Optional) Add a custom alias
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Click Shorten URL
 
-## Learn More
+Get your new link like:
 
-To learn more about Next.js, take a look at the following resources:
+bash
+Copy
+Edit
+http://localhost:3000/myalias
+🔮 Future Enhancements
+User authentication & dashboard
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Link analytics (clicks, locations, devices)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Expiry dates for short links
 
-## Deploy on Vercel
+QR code generator for each short link
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+Feel free to open a PR or suggest improvements.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📜 License
+This project is licensed under the MIT License – free to use and modify.
+
+⭐ Support
+If you like this project, please give it a ⭐ on GitHub!
